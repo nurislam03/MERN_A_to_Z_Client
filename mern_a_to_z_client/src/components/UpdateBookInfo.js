@@ -7,7 +7,12 @@ class UpdateBookInfo extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      book: {}
+      title: '',
+      isbn: '',
+      author: '',
+      description: '',
+      published_date: '',
+      publisher: ''
     };
   }
 
@@ -16,8 +21,14 @@ class UpdateBookInfo extends Component {
     axios
       .get('http://localhost:8082/api/books/'+this.props.match.params.id)
       .then(res => {
+        // this.setState({...this.state, book: res.data})
         this.setState({
-          book: res.data
+          title: res.data.title,
+          isbn: res.data.isbn,
+          author: res.data.author,
+          description: res.data.description,
+          published_date: res.data.published_date,
+          publisher: res.data.publisher
         })
       })
       .catch(err => {
@@ -71,7 +82,7 @@ class UpdateBookInfo extends Component {
             </div>
           </div>
 
-          <div>
+          <div className="col-md-8 m-auto">
           <form noValidate onSubmit={this.onSubmit}>
             <div className='form-group'>
               <label htmlFor="title">Title</label>
@@ -80,7 +91,7 @@ class UpdateBookInfo extends Component {
                 placeholder='Title of the Book'
                 name='title'
                 className='form-control'
-                value={this.state.book.title}
+                value={this.state.title}
                 onChange={this.onChange}
               />
             </div>
@@ -93,7 +104,7 @@ class UpdateBookInfo extends Component {
                 placeholder='ISBN'
                 name='isbn'
                 className='form-control'
-                value={this.state.book.isbn}
+                value={this.state.isbn}
                 onChange={this.onChange}
               />
             </div>
@@ -105,7 +116,7 @@ class UpdateBookInfo extends Component {
                 placeholder='Author'
                 name='author'
                 className='form-control'
-                value={this.state.book.author}
+                value={this.state.author}
                 onChange={this.onChange}
               />
             </div>
@@ -117,22 +128,22 @@ class UpdateBookInfo extends Component {
                 placeholder='Describe this book'
                 name='description'
                 className='form-control'
-                value={this.state.book.description}
+                value={this.state.description}
                 onChange={this.onChange}
               />
             </div>
 
-            {/* <div className='form-group'>
+            <div className='form-group'>
             <label htmlFor="published_date">Published Date</label>
               <input
                 type='date'
                 placeholder='published_date'
                 name='published_date'
                 className='form-control'
-                value={this.state.book.published_date}
+                value={this.state.published_date}
                 onChange={this.onChange}
               />
-            </div> */}
+            </div>
             <div className='form-group'>
             <label htmlFor="publisher">Publisher</label>
               <input
@@ -140,7 +151,7 @@ class UpdateBookInfo extends Component {
                 placeholder='Publisher of this Book'
                 name='publisher'
                 className='form-control'
-                value={this.state.book.publisher}
+                value={this.state.publisher}
                 onChange={this.onChange}
               />
             </div>
