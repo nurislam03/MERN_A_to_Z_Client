@@ -11,6 +11,7 @@ $ npm start
 
 ### To Explore all features in this project you need to connect the server first. Here you will find the necessary files (backend/server).
 
-[GitHub Repo - Backend (Server)]([https://github.com/nurislam03/MERN_A_to_Z](https://github.com/nurislam03/MERN_A_to_Z))
+##### GitHub Repo - Backend/Server
+[https://github.com/nurislam03/MERN_A_to_Z](https://github.com/nurislam03/MERN_A_to_Z)
 
-[Read My Article on LogRocket Blog about this server side coding]([https://blog.logrocket.com/mern-stack-a-to-z-part-1/]([https://blog.logrocket.com/mern-stack-a-to-z-part-1/](https://blog.logrocket.com/mern-stack-a-to-z-part-1/))
+[Read My Article on LogRocket Blog about this server side coding]([https://blog.logrocket.com/mern-stack-a-to-z-part-1/](https://blog.logrocket.com/mern-stack-a-to-z-part-1/))
