@@ -9,6 +9,8 @@ WORKDIR /app
 # Adding all files and dirs to /app inside container 
 ADD . /app/
 
+RUN ls
+
 # Installing dependencies
 RUN npm install
 
