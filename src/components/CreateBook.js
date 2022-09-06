@@ -34,7 +34,7 @@ class CreateBook extends Component {
     };
 
     axios
-      .post('http://mern-backend-devtron-demo-service.devtron-demo:80/api/books', data)
+      .post('https://mernbackend.devtron.info/api/books', data)
       .then(res => {
         this.setState({
           title: '',
